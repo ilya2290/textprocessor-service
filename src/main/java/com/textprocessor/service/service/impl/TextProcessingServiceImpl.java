@@ -10,6 +10,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -76,10 +77,14 @@ public class TextProcessingServiceImpl implements TextProcessingService {
     }
 
     private static String mostFrequencyWord(Map<String, Long> wordFrequency) {
-        return wordFrequency.entrySet()
-            .stream()
-            .max(Map.Entry.comparingByValue())
-            .map(Map.Entry::getKey)
+        long max = wordFrequency.values().stream()
+            .max(Long::compareTo)
+            .orElse(0L);
+
+        return wordFrequency.entrySet().stream()
+            .filter(e -> e.getValue() == max)
+            .map(Map.Entry::getKey).min(Comparator.comparingInt(String::length).reversed()
+                .thenComparing(Comparator.naturalOrder()))
             .orElse(Strings.EMPTY);
     }
 
