@@ -1,7 +1,6 @@
 # Text Processing Service (Producer)
 
 A **Spring Boot** service that fetches text from an external API and sends it to **Kafka** for further processing.  
-It also stores the message history in **MongoDB**.
 
 ---
 
@@ -15,6 +14,12 @@ It also stores the message history in **MongoDB**.
 - Apache Zookeeper
 - Docker
 
+---
+
+## Endpoints
+- HTTP GET, Endpoint URL: /betvictor/text
+- Returns the result of paragraph measures.
+- Run endpoint to curl "http://localhost:8080/betvictor/text?p=3"
 ---
 
 ## Configuration
