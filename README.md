@@ -84,4 +84,15 @@ services:
 - ```mvn clean install```
 - ```mvn spring-boot:run```
 
+## Run a fetch script
+This script can trigger the GET endpoint `/betvictor/text` to fetch data every second (interval can be configured inside the script).
+Script located in `src/scripts/fetch-hipsum.bash`.
+
+To run the script: 
+- Open Git Bash
+- Go to the script location place
+- Run the command  `$ bash fetch-hipsum.bash`
+
+
+
 
