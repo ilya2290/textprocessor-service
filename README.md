@@ -9,6 +9,8 @@ A **Spring Boot** service that fetches text from an external API and sends it to
 - Maven
 - Spring Boot 3.5
 - Spring Kafka
+- Spring Validation
+- Spring WebFlux
 - Lombok
 - Apache Kafka
 - Apache Zookeeper
