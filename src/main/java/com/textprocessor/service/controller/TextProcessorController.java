@@ -3,7 +3,7 @@ package com.textprocessor.service.controller;
 import com.textprocessor.service.constants.Endpoints;
 import com.textprocessor.service.responses.ParagraphResponse;
 import com.textprocessor.service.service.external.kafka.KafkaProducerService;
-import com.textprocessor.service.service.impl.TextProcessingServiceImpl;
+import com.textprocessor.service.service.impl.TextProcessorServiceImpl;
 import jakarta.validation.constraints.Positive;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = Endpoints.BETVICTOR_ENDPOINT, produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
 @RequiredArgsConstructor
-public class TextProcessingController {
+public class TextProcessorController {
 
-    private final TextProcessingServiceImpl processingService;
+    private final TextProcessorServiceImpl processingService;
     private final KafkaProducerService kafkaProducerService;
 
     @GetMapping("/text")

@@ -2,7 +2,7 @@ package com.textprocessor.service.service.impl;
 
 import com.textprocessor.service.responses.ParagraphResponse;
 import com.textprocessor.service.service.external.HipsumService;
-import com.textprocessor.service.service.TextProcessingService;
+import com.textprocessor.service.service.TextProcessorService;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
-public class TextProcessingServiceImpl implements TextProcessingService {
+public class TextProcessorServiceImpl implements TextProcessorService {
 
     private final HipsumService hipsumService;
 
