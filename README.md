@@ -20,7 +20,7 @@ A **Spring Boot** service that fetches text from an external API and sends it to
 ## Endpoints
 - HTTP GET, Endpoint URL: /betvictor/text
 - Returns the result of paragraph measures.
-- Run endpoint to curl "http://localhost:8080/betvictor/text?p=3"
+- Run endpoint to ```curl "http://localhost:8080/betvictor/text?p=3"```
 ---
 
 ## Configuration
@@ -80,8 +80,8 @@ services:
 ```
 
 ## Run the project
-- docker-compose -p text_processor_service up -d
-- mvn clean install
-- mvn spring-boot:run
+- ```docker-compose -p text_processor_service up -d```
+- ```mvn clean install```
+- ```mvn spring-boot:run```
 
 
