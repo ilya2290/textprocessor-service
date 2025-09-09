@@ -53,8 +53,6 @@ app.hipsum.base-url=https://hipsum.co
 Docker-compose file is located `src/main/java/com/textprocessor/service`
 
 ```
-docker-compose
-
 version: "3.8"
 
 services:
