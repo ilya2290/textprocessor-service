@@ -1,5 +1,4 @@
-# Text Processing Service (Producer)
-
+# Text Processing Service
 A **Spring Boot** service that fetches text from an external API and sends it to **Kafka** for further processing.  
 
 ---
